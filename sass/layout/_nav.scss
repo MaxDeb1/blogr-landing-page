@@ -1,0 +1,154 @@
+.navigation {
+  height: 125px; //
+  width: 100vw;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; //
+  position: absolute;
+  z-index: 10;
+}
+
+.menu {
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  padding: 0 6%;
+  top: 125px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+  .hydeMenu {
+    display: none;
+  }
+
+  .menu__box {
+    width: 100%;
+    padding: 35px 25px 22.5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15); 
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+  }
+
+  .drop-down__menu {
+    padding-bottom: 25px;
+    color: $headings;
+  }
+
+  .arrow {
+    margin-left: 3px;
+  }
+
+  .submenu__list {
+    background-color: hsl(240, 7%, 94%);
+    color: $body-copy;
+    border-radius: 5px;
+    margin-top: 25px;
+    padding: 12.5px 0;
+    display: none;
+
+    & li:hover {
+      font-weight: bolder;
+    }
+  }
+
+  .submenu {
+    padding: 12.5px 0;
+  }
+
+  .identification {
+    padding-top: 17.5px;
+    border-top: 1px solid hsl(240, 7%, 94%);
+  }
+
+
+
+@media (min-width: 1090px) {
+  .navbar {
+    width: 100vw;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .navigation {
+    width: 100%;
+    padding: 31.4px 160px 0 165px;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 0 0 0 60px;
+    position: static;
+  }
+
+  .hydeMenu {
+    display: flex;
+  }
+
+  .menu__box {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+
+    & > * {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .identification {
+    padding: 0;
+    border: none;
+    margin-left: auto;
+  }
+
+  .drop-down__menu {
+    margin-right: 30px;
+    padding-bottom: 0;
+    color: $text;
+
+    span:hover {
+      border-bottom: 1px solid $text;
+    }
+
+    .arrow.light {
+      display: inline-block;
+    }
+
+    .arrow.dark {
+      display: none;
+    }
+  }
+
+  .submenu__list {
+    width: 170px;
+    background-color: $text;
+    color: black;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px 25px;
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15); 
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.15);
+    display: none;
+    position: absolute;
+  }
+
+  .submenu {
+    padding: 20px 0;
+  }
+
+  .identification {
+    margin-right: 0;
+  }
+}
+
+
+
+

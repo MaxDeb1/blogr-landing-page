@@ -1,0 +1,138 @@
+button,
+input {
+  font-size: 1em;
+  font-weight: bolder;//
+  height: 47.5px;
+  width: 137.5px;///
+  margin: 0 auto 8px;///
+  padding: auto;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    outline: none;
+  }
+}
+
+.login {
+  background: white;
+  color: $headings;
+
+    &:hover {
+        background: $CTA-hover-bg;
+        color: $text;
+      }
+}
+
+.navigation__button {
+  width: 32px;
+  margin: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  .close {
+    display: none;
+  }
+}
+
+.sign_up {
+    background: linear-gradient(to right, $Very-light-red, $Light-red);
+    color: $text;
+
+    &:hover {
+        background: $CTA-hover-bg;
+      }
+}
+
+header {
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    .start {
+      color: $Light-red;
+
+      /// répétition !!!
+      &:hover {
+        background: $CTA-hover-bg;
+        color: $text;
+      }
+    }
+
+    .more {
+      background-color: transparent;
+      color: $text;
+      border: 1px solid $text;
+
+      &:hover {
+        background: $text;
+        color: $Light-red;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media (min-width: 1090px) {
+  button,
+  input {
+  font-size: 1em;
+  height: 49px;
+  width: 135px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    outline: none;
+    background: $CTA-hover-bg;
+    color: $text;
+  }
+}
+
+  .navigation__button {
+    display: none;
+  }
+
+  .login {
+    background-color: transparent;
+    color: $text;
+  }
+
+  .sign_up {
+    background: $text;
+    color: $Light-red;
+
+    &:hover {
+        background: $CTA-hover-bg;
+        color: $text;
+      }
+  }
+
+  header {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    .buttons {
+      gap: 1rem;
+    }
+  }
+
+}

@@ -1,0 +1,52 @@
+header {
+    height: 600px;
+    background: linear-gradient(to bottom right, $Very-light-red, $Light-red);
+    border-radius: 0 0 0 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bg-image {
+        height: 100%;
+        width: 100vw;
+        border-radius: 0 0 0 100px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    img {
+        height: 210%;
+        width: 390%;
+        transform: translate(-400px, -240px);
+        z-index: 0;
+    }
+
+    .title {
+        padding: 0 7%;
+        text-align: center;
+        color: $text;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 990px) {
+    header {
+        background: linear-gradient(to right, $Very-light-red, $Light-red);
+
+        img {
+            height: auto;
+            width: 200%;
+            transform: translate(-10%, -42%);
+            z-index: 0;
+        }
+    }
+}

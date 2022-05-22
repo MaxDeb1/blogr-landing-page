@@ -1,0 +1,20 @@
+/**
+ * Basic typography style for copy text
+ */
+/* body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+} */
+
+body {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

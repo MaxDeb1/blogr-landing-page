@@ -1,0 +1,229 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: $overpass;
+    overflow-x: hidden;
+}
+
+section {
+    text-align: center;
+
+    h2 {
+        color: $headings;
+        padding: 0 50px;
+    }
+
+    p {
+        padding: 0 25px 50px;
+    }
+
+    .illustration {
+        width: 100vw;
+        padding: 40px 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.desktop {
+    display: none;
+}
+
+.first {
+    margin: 100px 0 200px 0;
+}
+
+.second {
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position: -110px -250px;
+    background-color: $Very-dark-gray-blue;
+    color: $text;
+    border-radius: 0 100px 0 100px;
+
+    .illustration {
+        position: absolute;
+        transform: translateY(-220px);
+
+        img {
+            max-width: 400px;
+        }
+    }
+
+    .text {
+        padding: 190px 0 115px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        padding: 0 30px;
+        font-size: 1.05rem;
+        line-height: 1.9rem;
+    }
+}
+
+.third {
+    margin: 60px 0 50px;
+
+    .illustration {
+        width: 100vw;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 990px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    /**
+    * TODO: Revoir le code pour remplacer 1st, 2nd et 3rd par section
+    /* section {
+        display: flex;
+        align-items: center;
+        margin: 300px 0 260px;
+
+        .text {
+            flex-basis: 100%;
+            text-align: left;
+
+            h2 {
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                line-height: 2rem;
+            }
+    } */
+
+    .first {
+        width: 100vw;
+        margin: 160px 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40px 640px;
+        overflow: hidden;
+
+        .title {
+            grid-area: 1 / 1 / 2 / 3;
+            font-size: 2rem;
+        }
+
+        .illustration {
+            width: 50vw;
+            grid-area: 2 / 2 / 3 / 3;
+            padding: 0;
+            position: relative;
+
+            .desktop {
+                width: 120%;
+                position: absolute;
+                top: 50%;
+                left: 15%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .text {
+            text-align: left;
+
+            & > * {
+                padding-left: 170px;
+            }
+
+            h2 {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+
+    .second {
+        width: 100vw;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px;
+        background-size: 70%;
+        background-position: -50% 80%;
+
+        .illustration {
+            position: relative;
+            width: 100%;
+            transform: translateY(20px);
+
+            img {
+                max-width: 550px;
+            }
+        }
+
+        .text {
+            padding: 0;
+            text-align: left;
+            padding-right: 170px;
+        }
+
+        p {
+            padding: 0;
+        }
+    }
+
+    .third {
+        display: flex;
+        align-items: center;
+        margin: 300px 0 260px;
+
+        .text {
+            flex-basis: 100%;
+            text-align: left;
+
+            & > * {
+                padding-right: 165px; //
+                padding-left: 15px; //?
+            }
+
+            h2 {
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                line-height: 2rem;
+            }
+        }
+
+        .illustration {
+            position: relative;
+
+            .desktop {
+                width: 120%;
+                position: absolute;
+                top: 50%;
+                right: 15%; //
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
